@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Explore Sustainable Living - EcoLife</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+        
+        .explore-hero {
+            text-align: center;
+            padding: 6rem 2rem 2rem;
+            background-color: #e0f0e0;
+        }
+        
+        .explore-hero h1 {
+            color: #00A82D;
+            font-size: 2.5rem;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-image {
+            height: 200px;
+            background-color: #f0f9f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00A82D;
+            font-size: 3rem;
+        }
+        
+        .category-info {
+            padding: 1.5rem;
+        }
+        
+        .category-info h3 {
+            color: #00A82D;
+            margin-top: 0;
+        }
+        
+        .explore-button {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .explore-button:hover {
+            background-color: #008F26;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="explore-hero">
+        <h1>Explore Sustainable Living</h1>
+        <p>Discover ways to reduce your environmental footprint and live more sustainably</p>
+    </section>
+
+    <section class="categories">
+        <div class="category-card">
+            <div class="category-image">🏠</div>
+            <div class="category-info">
+                <h3>Eco-Friendly Home</h3>
+                <p>Discover sustainable alternatives for your living space that reduce energy and water consumption.</p>
+                <a href="#" class="explore-button">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="category-card">
+            <div class="category-image">🛒</div>
+            <div class="category-info">
+                <h3>Sustainable Shopping</h3>
+                <p>Find products that are ethically sourced, biodegradable, and environmentally friendly.</p>
+                <a href="shop.html" class="explore-button">Shop Now</a>
+            </div>
+        </div>
+        
+        <div class="category-card">
+            <div class="category-image">🚲</div>
+            <div class="category-info">
+                <h3>Green Transportation</h3>
+                <p>Explore eco-friendly transportation options to reduce your carbon footprint.</p>
+                <a href="#" class="explore-button">Discover</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-bar">
+        <div class="bottom-container">
+            <a href="#" class="help-button">Help</a>
+        </div>
+    </div>
+</body>
+</html>

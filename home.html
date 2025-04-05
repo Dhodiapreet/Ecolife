@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLife - Sustainable Living</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Slider Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333333;
+            text-align: center;
+            padding-bottom: 60px;
+            /* Space for bottom bar */
+        }
+
+        .slider-wrapper {
+            margin-top: 80px;
+            /* Pushed down below navbar */
+            padding: 20px;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 2px solid #00A82D;
+            border-radius: 8px;
+        }
+
+        .slides {
+            display: flex;
+            width: 200%;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            width: 50%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide1 {
+            background-color: #f0f9f0;
+        }
+
+        .slide2 {
+            background-color: #e0f0e0;
+        }
+
+        .slide-content {
+            text-align: center;
+        }
+
+        .slide-button {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .slide-button:hover {
+            background-color: #008F26;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #slide1:checked~.slides {
+            transform: translateX(0);
+        }
+
+        #slide2:checked~.slides {
+            transform: translateX(-50%);
+        }
+
+        #slide1:checked~.navigation .nav-dot:nth-child(1),
+        #slide2:checked~.navigation .nav-dot:nth-child(2) {
+            background-color: #00A82D;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Home Page Specific Styles */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #f0f9f0;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #00A82D;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: #00A82D;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="slider-wrapper">
+        <div class="slider-container">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+
+            <div class="slides">
+                <div class="slide slide1">
+                    <div class="slide-content">
+                        <a href="shop.html" class="slide-button">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        <a href="Explore.html" class="slide-button">EXPLORE NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <label for="slide1" class="nav-dot"></label>
+                <label for="slide2" class="nav-dot"></label>
+            </div>
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Sustainable Products</h3>
+            <p>Shop our collection of environmentally friendly products that help reduce waste.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Green Living Tips</h3>
+            <p>Learn how to make small changes that have a big impact on our planet.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Community</h3>
+            <p>Join our community of like-minded individuals working towards a greener future.</p>
+        </div>
+    </section>
+    </main>
+
+    <div class="bottom-bar">
+        <div class="bottom-container">
+            <a href="#" class="help-button">Help</a>
+        </div>
+    </div>
+</body>
+
+</html>

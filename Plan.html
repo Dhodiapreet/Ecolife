@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sustainability Planner - EcoLife</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+        .plan-hero {
+            text-align: center;
+            padding: 6rem 2rem 3rem;
+            background-color: #f0f9f0;
+            margin-bottom: 2rem;
+        }
+
+        .plan-hero h1 {
+            color: #00A82D;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .plan-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .plan-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #00A82D;
+        }
+
+        .step-card h3 {
+            color: #00A82D;
+            margin-top: 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .plan-form {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #00A82D;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background-color: #00A82D;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #008F26;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="plan-hero">
+        <h1>Your Sustainability Plan</h1>
+        <p>Create a personalized plan to reduce your environmental impact</p>
+    </section>
+
+    <div class="plan-container">
+        <section class="plan-steps">
+            <div class="step-card">
+                <h3><span class="step-number">1</span> Assess Your Impact</h3>
+                <p>Understand your current environmental footprint in areas like energy use, transportation, and waste.</p>
+            </div>
+            <div class="step-card">
+                <h3><span class="step-number">2</span> Set Goals</h3>
+                <p>Choose which areas you want to focus on and set achievable sustainability targets.</p>
+            </div>
+            <div class="step-card">
+                <h3><span class="step-number">3</span> Take Action</h3>
+                <p>Get personalized recommendations and track your progress over time.</p>
+            </div>
+        </section>
+
+        <section class="plan-form">
+            <h2>Create Your Plan</h2>
+            <form>
+                <div class="form-group">
+                    <label for="focus-area">Primary Focus Area</label>
+                    <select id="focus-area" required>
+                        <option value="">Select an area</option>
+                        <option value="energy">Energy Conservation</option>
+                        <option value="water">Water Usage</option>
+                        <option value="waste">Waste Reduction</option>
+                        <option value="transport">Transportation</option>
+                        <option value="shopping">Sustainable Shopping</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="goal-level">Goal Intensity</label>
+                    <select id="goal-level" required>
+                        <option value="">Select intensity</option>
+                        <option value="beginner">Beginner (small changes)</option>
+                        <option value="intermediate">Intermediate (moderate changes)</option>
+                        <option value="advanced">Advanced (significant lifestyle changes)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeline">Goal Timeline</label>
+                    <select id="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="1month">1 Month</option>
+                        <option value="3months">3 Months</option>
+                        <option value="6months">6 Months</option>
+                        <option value="1year">1 Year</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Generate My Plan</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="bottom-bar">
+        <div class="bottom-container">
+            <a href="#" class="help-button">Help</a>
+        </div>
+    </div>
+</body>
+
+</html>

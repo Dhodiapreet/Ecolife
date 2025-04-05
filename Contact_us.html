@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - EcoLife</title>
+    <style>
+        /* CONTACT SLIDE STYLES */
+        .contact-slide {
+            max-width: 800px;
+            margin: 80px auto 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 168, 45, 0.1);
+            border-top: 5px solid #00A82D;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-header h1 {
+            color: #00A82D;
+            margin-bottom: 10px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-info div {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            color: #00A82D;
+            font-size: 1.3rem;
+            min-width: 25px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .submit-btn {
+            background: #00A82D;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Your existing navbar here -->
+
+    <div class="contact-slide">
+        <div class="contact-header">
+            <h1>Contact EcoLife</h1>
+            <p>Get in touch with our sustainability team</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div>
+                    <span class="contact-icon">📧</span>
+                    <span>contact@ecolife.com</span>
+                </div>
+                <div>
+                    <span class="contact-icon">📞</span>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div>
+                    <span class="contact-icon">🏢</span>
+                    <span>123 Green Street, Eco City</span>
+                </div>
+                <div>
+                    <span class="contact-icon">🕒</span>
+                    <span>Mon-Fri: 9AM-5PM</span>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <select required>
+                    <option value="">Select Subject</option>
+                    <option>General Inquiry</option>
+                    <option>Product Questions</option>
+                    <option>Partnership</option>
+                </select>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Your existing bottom bar here -->
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent.');
+            this.reset();
+        });
+    </script>
+
+    <div class="bottom-bar">
+        <div class="bottom-container">
+            <a href="#" class="help-button">Help</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Help - EcoLife</title>
+    <style>
+        /* SIMPLE HELP STYLES */
+        .simple-help {
+            max-width: 800px;
+            margin: 80px auto 100px;
+            padding: 20px;
+        }
+
+        .help-title {
+            color: #00A82D;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .help-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-left: 3px solid #00A82D;
+        }
+
+        .help-question {
+            color: #00A82D;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .help-answer {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .contact-support {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f0f9f0;
+            border-radius: 8px;
+        }
+
+        .help-btn {
+            display: inline-block;
+            background: #00A82D;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="simple-help">
+        <h1 class="help-title">Help Center</h1>
+
+        <div class="help-item">
+            <h3 class="help-question" onclick="toggleHelp(this)">
+                How do I track my order?
+                <span>+</span>
+            </h3>
+            <div class="help-answer">
+                <p>Log in to your account and go to "My Orders" to track your shipment. We'll also email you tracking
+                    details.</p>
+            </div>
+        </div>
+
+        <div class="help-item">
+            <h3 class="help-question" onclick="toggleHelp(this)">
+                What are your shipping options?
+                <span>+</span>
+            </h3>
+            <div class="help-answer">
+                <p>We offer standard (3-5 days) and express (1-2 days) shipping. All packaging is eco-friendly.</p>
+            </div>
+        </div>
+
+        <div class="help-item">
+            <h3 class="help-question" onclick="toggleHelp(this)">
+                How can I return a product?
+                <span>+</span>
+            </h3>
+            <div class="help-answer">
+                <p>Visit our Returns page within 30 days of purchase. We'll email you a prepaid return label.</p>
+            </div>
+        </div>
+
+        <div class="contact-support">
+            <h3>Need more help?</h3>
+            <p>Email us anytime at help@ecolife.com</p>
+            <a href="Contact_us.html" class="help-btn">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleHelp(question) {
+            const answer = question.nextElementSibling;
+            const symbol = question.querySelector('span');
+
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                symbol.textContent = "+";
+            } else {
+                answer.style.display = "block";
+                symbol.textContent = "-";
+            }
+        }
+    </script>
+    <div class="bottom-bar">
+        <div class="bottom-container">
+            <a href="#" class="help-button">Help</a>
+        </div>
+    </div>
+</body>
+
+</html>
