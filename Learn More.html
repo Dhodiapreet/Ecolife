@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Learn About Sustainable Living - EcoLife</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        .learn-hero {
+            text-align: center;
+            padding: 6rem 2rem 3rem;
+            background-color: #e0f0e0;
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                            url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .learn-hero h1 {
+            color: #00A82D;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .learn-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .learn-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .learn-section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .learn-section h2 {
+            color: #00A82D;
+            margin-top: 0;
+            border-bottom: 2px solid #e0f0e0;
+            padding-bottom: 0.5rem;
+        }
+        
+        .tip-card {
+            background: #f9f9f9;
+            border-left: 4px solid #00A82D;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background: #f0f9f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .benefit-card h3 {
+            color: #00A82D;
+            margin-top: 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #008F26;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="Plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <section class="learn-hero">
+        <h1>Eco-Friendly Home Solutions</h1>
+        <p>Learn how to transform your living space into an environmentally sustainable haven that saves energy, water, and money</p>
+    </section>
+
+    <div class="learn-container">
+        <section class="learn-section">
+            <h2>Why Eco-Friendly Homes Matter</h2>
+            <p>Traditional homes account for about 20% of all energy consumption and 17% of CO₂ emissions in developed countries. By making sustainable choices in our living spaces, we can significantly reduce our environmental impact while often saving money in the long run.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Energy Savings</h3>
+                    <p>Reduce your energy consumption by 30-50% with proper insulation and efficient appliances</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Water Conservation</h3>
+                    <p>Cut water usage by 40% with low-flow fixtures and smart landscaping</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Healthier Living</h3>
+                    <p>Improve indoor air quality with non-toxic materials and proper ventilation</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="learn-section">
+            <h2>Key Areas to Focus On</h2>
+            
+            <div class="tip-card">
+                <h3>1. Energy Efficiency</h3>
+                <p>Start with an energy audit to identify where your home loses the most energy. Common areas for improvement include:</p>
+                <ul>
+                    <li>Upgrading to ENERGY STAR® certified appliances</li>
+                    <li>Installing programmable thermostats</li>
+                    <li>Switching to LED lighting</li>
+                    <li>Improving insulation in walls and attics</li>
+                    <li>Considering solar panels or green energy providers</li>
+                </ul>
+            </div>
+            
+            <div class="tip-card">
+                <h3>2. Water Conservation</h3>
+                <p>Water scarcity affects nearly 40% of the world's population. Reduce your home's water footprint with:</p>
+                <ul>
+                    <li>Low-flow showerheads and faucet aerators</li>
+                    <li>Dual-flush or water-saving toilets</li>
+                    <li>Rainwater harvesting systems</li>
+                    <li>Drought-resistant landscaping (xeriscaping)</li>
+                    <li>Greywater systems for garden irrigation</li>
+                </ul>
+            </div>
+            
+            <div class="tip-card">
+                <h3>3. Sustainable Materials</h3>
+                <p>When building or renovating, choose materials with low environmental impact:</p>
+                <ul>
+                    <li>Bamboo or cork flooring (rapidly renewable)</li>
+                    <li>Recycled glass countertops</li>
+                    <li>Low-VOC paints and finishes</li>
+                    <li>Salvaged or reclaimed wood</li>
+                    <li>Natural fiber carpets and rugs</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="learn-section">
+            <h2>Getting Started</h2>
+            <p>You don't need to overhaul your home all at once. Start with small, manageable changes:</p>
+            
+            <div class="tip-card">
+                <h3>Beginner Steps (0-3 months)</h3>
+                <ul>
+                    <li>Replace incandescent bulbs with LEDs</li>
+                    <li>Install low-flow showerheads</li>
+                    <li>Start composting food waste</li>
+                    <li>Use smart power strips to eliminate phantom loads</li>
+                    <li>Set water heater to 120°F (49°C)</li>
+                </ul>
+            </div>
+            
+            <div class="tip-card">
+                <h3>Intermediate Steps (3-12 months)</h3>
+                <ul>
+                    <li>Upgrade to Energy Star appliances as old ones fail</li>
+                    <li>Install a programmable thermostat</li>
+                    <li>Add insulation to your attic</li>
+                    <li>Plant native, drought-resistant plants</li>
+                    <li>Start a vegetable garden</li>
+                </ul>
+            </div>
+            
+            <div class="tip-card">
+                <h3>Advanced Steps (1-3 years)</h3>
+                <ul>
+                    <li>Install solar panels or a solar water heater</li>
+                    <li>Replace windows with energy-efficient models</li>
+                    <li>Consider a green roof or living wall</li>
+                    <li>Install a rainwater collection system</li>
+                    <li>Transition to a heat pump system</li>
+                </ul>
+            </div>
+            
+            <a href="explore.html" class="back-button">Back to Explore</a>
+        </section>
+    </div>
+
+    <div class="bottom-container">
+        <a href="Help.html" class="help-button">Help</a>
+    </div>
+</body>
+</html>
