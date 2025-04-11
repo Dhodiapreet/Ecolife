@@ -12,6 +12,10 @@
             padding: 3rem 2rem;
             background-color: #f0f9f0;
             margin-bottom: 2rem;
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                            url('https://images.unsplash.com/photo-1600585152220-90363fe7e115');
+            background-size: cover;
+            background-position: center;
         }
         
         .shop-header h1 {
@@ -24,6 +28,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2rem;
+            padding: 0 2rem;
             margin-bottom: 3rem;
         }
         
@@ -37,6 +42,7 @@
         
         .product-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .product-image {
@@ -58,6 +64,8 @@
         .product-price {
             font-weight: bold;
             margin: 1rem 0;
+            color: #2e7d32;
+            font-size: 1.1rem;
         }
         
         .eco-badge {
@@ -71,9 +79,48 @@
             margin-bottom: 0.5rem;
         }
         
+        .btn {
+            background-color: #00A82D;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #008F26;
+        }
+        
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1.2rem;
+            background: #e0f0e0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: #00A82D;
+            color: white;
+        }
+        
         @media (max-width: 768px) {
             .products-container {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                padding: 0 1rem;
             }
         }
     </style>
@@ -87,7 +134,8 @@
                 <span class="leaf">🍃</span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
                 <li><a href="Plan.html">Plan</a></li>
                 <li><a href="Contact_us.html">Contact us</a></li>
                 <li><a href="log.html" class="nav-button">Login</a></li>
@@ -101,175 +149,144 @@
             <p>Shop our carefully curated selection of eco-friendly products</p>
         </header>
 
+       
         <div class="products-container">
-            <!-- Product cards would be inserted here -->
-            <!-- Example product card -->
+            <!-- Personal Care Products -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6" alt="Bamboo Toothbrush" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
+                    <span class="eco-badge">BEST SELLER</span>
                     <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">120/-</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <p class="product-description">Biodegradable bamboo handle with soft charcoal bristles (pack of 4).</p>
+                    <span class="product-price">$14.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
-            <!-- Add more product cards following the same structure -->
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1591348122449-ebce7ebee5d7" alt="Solid Shampoo Bar" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <span class="eco-badge">NEW</span>
+                    <h3 class="product-title">Organic Shampoo Bar</h3>
+                    <p class="product-description">Plastic-free, vegan shampoo bar for all hair types (lasts 80+ washes).</p>
+                    <span class="product-price">$9.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
+            <!-- Kitchen Products -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1585314062604-1a357de8b000" alt="Beeswax Wraps" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <h3 class="product-title">Beeswax Food Wraps</h3>
+                    <p class="product-description">Reusable alternative to plastic wrap (set of 3 sizes).</p>
+                    <span class="product-price">$18.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Compost Bin" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <span class="eco-badge">ECO CHOICE</span>
+                    <h3 class="product-title">Countertop Compost Bin</h3>
+                    <p class="product-description">Stainless steel with charcoal filter (1.3 gallon capacity).</p>
+                    <span class="product-price">$29.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
+            <!-- Home Products -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267" alt="Bamboo Sheets" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <h3 class="product-title">Bamboo Bed Sheets</h3>
+                    <p class="product-description">Luxuriously soft, organic bamboo (queen size, white).</p>
+                    <span class="product-price">$89.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1583845112203-454c1c2e0f6d" alt="LED Bulbs" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <span class="eco-badge">ENERGY SAVER</span>
+                    <h3 class="product-title">Smart LED Bulbs (4-Pack)</h3>
+                    <p class="product-description">Energy efficient, dimmable, and wifi enabled.</p>
+                    <span class="product-price">$34.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
+            <!-- Fashion Products -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1561526116-e2460f4d40a8" alt="Organic Cotton Tote" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
+                    <h3 class="product-title">Organic Cotton Tote Bag</h3>
+                    <p class="product-description">Reusable shopping bag with reinforced handles.</p>
                     <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9" alt="Recycled Sneakers" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <span class="eco-badge">NEW</span>
+                    <h3 class="product-title">Recycled Sneakers</h3>
+                    <p class="product-description">Made from 90% recycled materials (various colors).</p>
+                    <span class="product-price">$79.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
+            <!-- More Products -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="Stainless Steel Straws" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <h3 class="product-title">Stainless Steel Straw Set</h3>
+                    <p class="product-description">4 straws with cleaning brush (straight and bent).</p>
+                    <span class="product-price">$11.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8" alt="Water Bottle" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <span class="eco-badge">BEST SELLER</span>
+                    <h3 class="product-title">Glass Water Bottle</h3>
+                    <p class="product-description">With silicone sleeve and bamboo lid (750ml).</p>
+                    <span class="product-price">$22.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1583947581924-860bda6a26df" alt="Safety Razor" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <h3 class="product-title">Stainless Safety Razor</h3>
+                    <p class="product-description">Lifetime warranty with 10 replacement blades.</p>
+                    <span class="product-price">$29.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
+                <img src="https://images.unsplash.com/photo-1595341595379-cf0f2a6daf25" alt="Bamboo Cutlery" class="product-image">
                 <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
-                <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
-                <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
-                <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40" alt="Bamboo Toothbrush" class="product-image">
-                <div class="product-info">
-                    <span class="eco-badge">Eco Choice</span>
-                    <h3 class="product-title">Bamboo Toothbrush Set</h3>
-                    <p class="product-description">Biodegradable bamboo handle with soft bristles.</p>
-                    <span class="product-price">$12.99</span>
-                    <button class="btn" style="width: 100%">Add to Cart</button>
+                    <span class="eco-badge">TRAVEL FRIENDLY</span>
+                    <h3 class="product-title">Bamboo Travel Cutlery</h3>
+                    <p class="product-description">Portable set with fork, spoon, knife, and straw.</p>
+                    <span class="product-price">$15.99</span>
+                    <button class="btn">Add to Cart</button>
                 </div>
             </div>
         </div>
     </main>
     <div class="bottom-bar">
         <div class="bottom-container">
-            <a href="#" class="help-button">Help</a>
+            <a href="Help.html" class="help-button">Help</a>
         </div>
     </div>
 </body>
