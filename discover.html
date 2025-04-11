@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Discover Sustainable Living - EcoLife</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+        
+        .discover-hero {
+            text-align: center;
+            padding: 6rem 2rem 2rem;
+            background-color: #e0f0e0;
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                            url('https://images.unsplash.com/photo-1466611653911-95081537e5b7');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .discover-hero h1 {
+            color: #00A82D;
+            font-size: 2.5rem;
+        }
+        
+        .discover-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .discover-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .discover-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .discover-image {
+            height: 200px;
+            background-color: #f0f9f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00A82D;
+            font-size: 3rem;
+        }
+        
+        .discover-info {
+            padding: 1.5rem;
+        }
+        
+        .discover-info h3 {
+            color: #00A82D;
+            margin-top: 0;
+        }
+        
+        .discover-tag {
+            display: inline-block;
+            background-color: #e0f0e0;
+            color: #00A82D;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .discover-button {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .discover-button:hover {
+            background-color: #008F26;
+        }
+        
+        .discover-featured {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .discover-featured h2 {
+            color: #00A82D;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="eco">ECO</span>
+                <span class="life">LIFE</span>
+                <span class="leaf">🍃</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Explore.html">Explore</a></li>
+                <li><a href="Plan.html">Plan</a></li>
+                <li><a href="Contact_us.html">Contact us</a></li>
+                <li><a href="log.html" class="nav-button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="discover-hero">
+        <h1>Discover Sustainable Living</h1>
+        <p>Learn about innovative solutions and inspiring stories for a greener future</p>
+    </section>
+
+    <section class="discover-content">
+        <div class="discover-featured">
+            <h2>This Week's Featured Discoveries</h2>
+        </div>
+        
+        <div class="discover-card">
+            <div class="discover-image">🌱</div>
+            <div class="discover-info">
+                <span class="discover-tag">Urban Gardening</span>
+                <h3>Vertical Farms in Cities</h3>
+                <p>How urban agriculture is transforming food production and reducing transportation emissions.</p>
+             
+            </div>
+        </div>
+        
+        <div class="discover-card">
+            <div class="discover-image">♻️</div>
+            <div class="discover-info">
+                <span class="discover-tag">Innovation</span>
+                <h3>Breakthrough in Plastic Recycling</h3>
+                <p>New technology that can recycle previously unrecyclable plastics with 95% efficiency.</p>
+                
+            </div>
+        </div>
+        
+        <div class="discover-card">
+            <div class="discover-image">🏙️</div>
+            <div class="discover-info">
+                <span class="discover-tag">Sustainable Cities</span>
+                <h3>Carbon-Neutral Neighborhoods</h3>
+                <p>How one community achieved net-zero emissions through smart design and renewable energy.</p>
+                
+            </div>
+        </div>
+        
+        <div class="discover-card">
+            <div class="discover-image">🌊</div>
+            <div class="discover-info">
+                <span class="discover-tag">Conservation</span>
+                <h3>Ocean Cleanup Success</h3>
+                <p>The inspiring story of how volunteers removed 10 tons of plastic from coastal waters.</p>
+                
+            </div>
+        </div>
+        
+        <div class="discover-card">
+            <div class="discover-image">🏡</div>
+            <div class="discover-info">
+                <span class="discover-tag">Architecture</span>
+                <h3>Earthship Homes</h3>
+                <p>Self-sufficient, off-grid homes built from natural and recycled materials.</p>
+                
+            </div>
+        </div>
+        
+        <div class="discover-card">
+            <div class="discover-image">🚴</div>
+            <div class="discover-info">
+                <span class="discover-tag">Transportation</span>
+                <h3>Bike-Friendly Cities</h3>
+                <p>How Copenhagen became the world's most bicycle-friendly city and reduced emissions by 40%.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-container">
+        <a href="Help.html" class="help-button">Help</a>
+    </div>
+</body>
+</html>
