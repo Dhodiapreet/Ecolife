@@ -1,70 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Help - EcoLife</title>
-    <style>
-        /* SIMPLE HELP STYLES */
-        .simple-help {
-            max-width: 800px;
-            margin: 80px auto 100px;
-            padding: 20px;
-        }
-
-        .help-title {
-            color: #00A82D;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .help-item {
-            background: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-left: 3px solid #00A82D;
-        }
-
-        .help-question {
-            color: #00A82D;
-            font-weight: bold;
-            margin: 0 0 10px 0;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .help-answer {
-            display: none;
-            padding-top: 10px;
-        }
-
-        .contact-support {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: #f0f9f0;
-            border-radius: 8px;
-        }
-
-        .help-btn {
-            display: inline-block;
-            background: #00A82D;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Eco-Help Center | Environmental Support</title>
+    <link rel="stylesheet" href="help style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <nav class="navbar">
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-leaf"></i> Eco-Help Center</h1>
+            <p>Find solutions for environmental issues or contact our green team</p>
+        </div>
+    </header>
+<nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <span class="eco">ECO</span>
@@ -72,7 +22,7 @@
                 <span class="leaf">🍃</span>
             </div>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="Plan.html">Plan</a></li>
                 <li><a href="Contact_us.html">Contact us</a></li>
                 <li><a href="log.html" class="nav-button">Login</a></li>
@@ -80,66 +30,101 @@
         </div>
     </nav>
 
-    <div class="simple-help">
-        <h1 class="help-title">Help Center</h1>
-
-        <div class="help-item">
-            <h3 class="help-question" onclick="toggleHelp(this)">
-                How do I track my order?
-                <span>+</span>
-            </h3>
-            <div class="help-answer">
-                <p>Log in to your account and go to "My Orders" to track your shipment. We'll also email you tracking
-                    details.</p>
+    <div class="container">
+        <section id="search">
+            <h2><i class="fas fa-search"></i> Search Eco-Articles</h2>
+            <div class="search-box">
+                <input type="text" placeholder="Search for environmental solutions...">
+                <button><i class="fas fa-search"></i> Search</button>
             </div>
-        </div>
+        </section>
 
-        <div class="help-item">
-            <h3 class="help-question" onclick="toggleHelp(this)">
-                What are your shipping options?
-                <span>+</span>
-            </h3>
-            <div class="help-answer">
-                <p>We offer standard (3-5 days) and express (1-2 days) shipping. All packaging is eco-friendly.</p>
+        <section id="quick-links">
+            <h2><i class="fas fa-bolt"></i> Quick Help</h2>
+            <div class="quick-links-grid">
+                <a href="#recycling" class="quick-link-card">
+                    <i class="fas fa-recycle"></i>
+                    <span>Recycling Guide</span>
+                </a>
+                <a href="#carbon" class="quick-link-card">
+                    <i class="fas fa-cloud"></i>
+                    <span>Carbon Footprint</span>
+                </a>
+                <a href="#volunteer" class="quick-link-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Volunteer Programs</span>
+                </a>
+                <a href="#donate" class="quick-link-card">
+                    <i class="fas fa-donate"></i>
+                    <span>Donation Info</span>
+                </a>
             </div>
-        </div>
+        </section>
 
-        <div class="help-item">
-            <h3 class="help-question" onclick="toggleHelp(this)">
-                How can I return a product?
-                <span>+</span>
-            </h3>
-            <div class="help-answer">
-                <p>Visit our Returns page within 30 days of purchase. We'll email you a prepaid return label.</p>
+        <section id="faq">
+            <h2><i class="far fa-question-circle"></i> Environmental FAQs</h2>
+            
+            <div class="faq-item">
+                <h3>How can I reduce my plastic waste?</h3>
+                <p>Start by using reusable bags, bottles, and containers. Choose products with minimal packaging, and participate in local recycling programs. Our <a href="/plastic-reduction">Plastic Reduction Guide</a> has more detailed suggestions.</p>
             </div>
-        </div>
+            
+            <div class="faq-item">
+                <h3>What's the most effective way to lower my carbon footprint?</h3>
+                <p>Key actions include reducing energy consumption at home, using public transportation, eating less meat, and supporting renewable energy initiatives. Try our <a href="/carbon-calculator">Carbon Calculator</a> to assess your impact.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How can I get involved in local environmental projects?</h3>
+                <p>Check our <a href="/volunteer">Volunteer Portal</a> for upcoming cleanups, tree planting events, and educational programs in your area. You can also start your own initiative with our community toolkit.</p>
+            </div>
+        </section>
 
-        <div class="contact-support">
-            <h3>Need more help?</h3>
-            <p>Email us anytime at help@ecolife.com</p>
-            <a href="Contact_us.html" class="help-btn">Contact Us</a>
-        </div>
+        <section id="contact">
+            <h2><i class="far fa-envelope"></i> Contact Our Green Team</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Other Ways to Reach Us</h3>
+                    <p><i class="fas fa-phone"></i> Eco-Help Line: 1-800-GREEN-HELP</p>
+                    <p><i class="fas fa-envelope"></i> Email: help@eco-website.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Green Headquarters: 123 Earth Lane, Eco-City</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                        
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                        
+                        <label for="topic">Help Topic</label>
+                        <select id="topic" required>
+                            <option value="">Select a topic</option>
+                            <option value="recycling">Recycling Questions</option>
+                            <option value="volunteer">Volunteering</option>
+                            <option value="donations">Donations</option>
+                            <option value="education">Environmental Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <label for="message">Your Environmental Question</label>
+                        <textarea id="message" rows="5" required placeholder="How can we help you make a difference?"></textarea>
+                        
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Send Green Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <script>
-        function toggleHelp(question) {
-            const answer = question.nextElementSibling;
-            const symbol = question.querySelector('span');
-
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                symbol.textContent = "+";
-            } else {
-                answer.style.display = "block";
-                symbol.textContent = "-";
-            }
-        }
-    </script>
-    <div class="bottom-bar">
-        <div class="bottom-container">
-            <a href="#" class="help-button">Help</a>
-        </div>
-    </div>
+    <footer>
+        <p>Together we can protect our planet. Every action counts.</p>
+        <p>© 2023 Eco-Website Help Center. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
