@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +15,10 @@
             color: #333333;
             text-align: center;
             padding-bottom: 60px;
-            /* Space for bottom bar */
         }
 
         .slider-wrapper {
             margin-top: 80px;
-            /* Pushed down below navbar */
             padding: 20px;
         }
 
@@ -30,34 +27,63 @@
             max-width: 1000px;
             margin: 0 auto;
             overflow: hidden;
-            border: 2px solid #00A82D;
             border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .slides {
             display: flex;
             width: 200%;
             transition: transform 0.5s ease;
+            height: 500px;
         }
 
         .slide {
             width: 50%;
-            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
         .slide1 {
-            background-color: #f0f9f0;
+            background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
         }
 
         .slide2 {
-            background-color: #e0f0e0;
+            background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
         }
 
         .slide-content {
-            text-align: center;
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .slide-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .slide-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .slide-button {
@@ -69,11 +95,14 @@
             font-weight: bold;
             text-decoration: none;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            border: 2px solid #00A82D;
         }
 
         .slide-button:hover {
-            background-color: #008F26;
+            background-color: rgba(0, 168, 45, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .navigation {
@@ -83,15 +112,16 @@
             transform: translateX(-50%);
             display: flex;
             gap: 10px;
+            z-index: 2;
         }
 
         .nav-dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.5);
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
         }
 
         #slide1:checked~.slides {
@@ -105,6 +135,7 @@
         #slide1:checked~.navigation .nav-dot:nth-child(1),
         #slide2:checked~.navigation .nav-dot:nth-child(2) {
             background-color: #00A82D;
+            transform: scale(1.2);
         }
 
         input[type="radio"] {
@@ -135,7 +166,11 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            padding: 0 2rem;
             margin-bottom: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .feature-card {
@@ -144,15 +179,46 @@
             padding: 2rem;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
         }
 
         .feature-card h3 {
             color: #00A82D;
             margin-bottom: 1rem;
         }
+
+        .feature-card a {
+            color: #00A82D;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .feature-card a:hover {
+            color: #008F26;
+            text-decoration: underline;
+        }
+
+        .help-button {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 2rem auto;
+            transition: background-color 0.3s;
+        }
+
+        .help-button:hover {
+            background-color: #008F26;
+        }
     </style>
 </head>
-
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -178,11 +244,15 @@
             <div class="slides">
                 <div class="slide slide1">
                     <div class="slide-content">
+                        <h2>Eco-Friendly Products</h2>
+                        <p>Discover our sustainable collection that helps reduce environmental impact without compromising quality.</p>
                         <a href="shop.html" class="slide-button">SHOP NOW</a>
                     </div>
                 </div>
                 <div class="slide slide2">
                     <div class="slide-content">
+                        <h2>Green Living Guide</h2>
+                        <p>Learn how to make sustainable choices in your daily life with our comprehensive resources.</p>
                         <a href="Explore.html" class="slide-button">EXPLORE NOW</a>
                     </div>
                 </div>
@@ -198,24 +268,22 @@
     <section class="features">
         <div class="feature-card">
             <h3>Sustainable Products</h3>
-            <p>Shop our collection of environmentally friendly products that help reduce waste.</p>
+            <p>Shop our collection of environmentally friendly products that help reduce waste and promote green living.</p>
         </div>
         <div class="feature-card">
             <h3>Green Living Tips</h3>
-            <p>Learn how to make small changes that have a big impact on our planet.</p>
+            <p>Learn how to make small changes that have a big impact on our planet. From energy saving to zero-waste solutions.</p>
         </div>
         <div class="feature-card">
             <h3>Community</h3>
             <p>Join our community of like-minded individuals working towards a greener future.</p>
+            <a href="log.html">Login Now</a>
         </div>
     </section>
-    </main>
 
-    <div class="bottom-bar">
-        <div class="bottom-container">
-            <a href="#" class="help-button">Help</a>
-        </div>
+    <div style="text-align: center;">
+        <a href="Help.html" class="help-button">Need Help? Contact Us</a>
     </div>
 </body>
-
 </html>
+
