@@ -3,18 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-Help Center | Environmental Support</title>
-    <link rel="stylesheet" href="help style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Help & Support - EcoLife</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333333;
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        /* Reused navbar styles from index.html */
+        .navbar {
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .eco {
+            color: #00A82D;
+        }
+
+        .life {
+            color: #333333;
+        }
+
+        .leaf {
+            margin-left: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00A82D;
+        }
+
+        .nav-button {
+            background-color: #00A82D;
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-button:hover {
+            background-color: #008F26;
+        }
+
+        /* Help Page Specific Styles */
+        .help-hero {
+            background-image: linear-gradient(rgba(0, 168, 45, 0.8), rgba(0, 168, 45, 0.6)), 
+                              url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .help-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .help-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .help-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .help-section {
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .help-section h2 {
+            color: #00A82D;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .help-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #00A82D;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: #f0f9f0;
+            padding: 1.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #e0f3e0;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+            display: none;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        /* CSS-only FAQ toggle using :target */
+        .faq-item:target .faq-answer {
+            display: block;
+        }
+
+        .faq-item:target .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card h3 {
+            color: #00A82D;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #00A82D;
+            margin-bottom: 1rem;
+        }
+
+        .green-button {
+            display: inline-block;
+            background-color: #00A82D;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: 2px solid #00A82D;
+            margin-top: 1rem;
+        }
+
+        .green-button:hover {
+            background-color: #008F26;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .eco-tips {
+            background-color: #f0f9f0;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        .eco-tips h2 {
+            color: #00A82D;
+            margin-bottom: 2rem;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .tip-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tip-item h3 {
+            color: #00A82D;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1><i class="fas fa-leaf"></i> Eco-Help Center</h1>
-            <p>Find solutions for environmental issues or contact our green team</p>
-        </div>
-    </header>
-<nav class="navbar">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <span class="eco">ECO</span>
@@ -30,101 +281,104 @@
         </div>
     </nav>
 
-    <div class="container">
-        <section id="search">
-            <h2><i class="fas fa-search"></i> Search Eco-Articles</h2>
-            <div class="search-box">
-                <input type="text" placeholder="Search for environmental solutions...">
-                <button><i class="fas fa-search"></i> Search</button>
-            </div>
-        </section>
+    <section class="help-hero">
+        <h1>How Can We Help You?</h1>
+        <p>Find answers to your questions about sustainable living, our products, and how you can make a positive environmental impact.</p>
+    </section>
 
-        <section id="quick-links">
-            <h2><i class="fas fa-bolt"></i> Quick Help</h2>
-            <div class="quick-links-grid">
-                <a href="#recycling" class="quick-link-card">
-                    <i class="fas fa-recycle"></i>
-                    <span>Recycling Guide</span>
+    <div class="help-container">
+        <section class="help-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item" id="faq1">
+                <a href="#faq1" class="faq-question">
+                    <span>How do EcoLife products help the environment?</span>
+                    <span class="faq-toggle">+</span>
                 </a>
-                <a href="#carbon" class="quick-link-card">
-                    <i class="fas fa-cloud"></i>
-                    <span>Carbon Footprint</span>
-                </a>
-                <a href="#volunteer" class="quick-link-card">
-                    <i class="fas fa-hands-helping"></i>
-                    <span>Volunteer Programs</span>
-                </a>
-                <a href="#donate" class="quick-link-card">
-                    <i class="fas fa-donate"></i>
-                    <span>Donation Info</span>
-                </a>
-            </div>
-        </section>
-
-        <section id="faq">
-            <h2><i class="far fa-question-circle"></i> Environmental FAQs</h2>
-            
-            <div class="faq-item">
-                <h3>How can I reduce my plastic waste?</h3>
-                <p>Start by using reusable bags, bottles, and containers. Choose products with minimal packaging, and participate in local recycling programs. Our <a href="/plastic-reduction">Plastic Reduction Guide</a> has more detailed suggestions.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>What's the most effective way to lower my carbon footprint?</h3>
-                <p>Key actions include reducing energy consumption at home, using public transportation, eating less meat, and supporting renewable energy initiatives. Try our <a href="/carbon-calculator">Carbon Calculator</a> to assess your impact.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>How can I get involved in local environmental projects?</h3>
-                <p>Check our <a href="/volunteer">Volunteer Portal</a> for upcoming cleanups, tree planting events, and educational programs in your area. You can also start your own initiative with our community toolkit.</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2><i class="far fa-envelope"></i> Contact Our Green Team</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Other Ways to Reach Us</h3>
-                    <p><i class="fas fa-phone"></i> Eco-Help Line: 1-800-GREEN-HELP</p>
-                    <p><i class="fas fa-envelope"></i> Email: help@eco-website.org</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Green Headquarters: 123 Earth Lane, Eco-City</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                <div class="faq-answer">
+                    <p>All EcoLife products are made from sustainable, biodegradable, or recycled materials. They're designed to reduce waste, conserve resources, and minimize carbon footprint throughout their lifecycle. Each product comes with information about its environmental benefits and proper disposal methods.</p>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required>
-                        
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required>
-                        
-                        <label for="topic">Help Topic</label>
-                        <select id="topic" required>
-                            <option value="">Select a topic</option>
-                            <option value="recycling">Recycling Questions</option>
-                            <option value="volunteer">Volunteering</option>
-                            <option value="donations">Donations</option>
-                            <option value="education">Environmental Education</option>
-                            <option value="other">Other</option>
-                        </select>
-                        
-                        <label for="message">Your Environmental Question</label>
-                        <textarea id="message" rows="5" required placeholder="How can we help you make a difference?"></textarea>
-                        
-                        <button type="submit"><i class="fas fa-paper-plane"></i> Send Green Message</button>
-                    </form>
+            </div>
+            
+            <div class="faq-item" id="faq2">
+                <a href="#faq2" class="faq-question">
+                    <span>What makes a lifestyle "sustainable"?</span>
+                    <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <p>A sustainable lifestyle means making choices that reduce your environmental impact. This includes reducing waste, conserving energy and water, choosing eco-friendly products, supporting local and organic food systems, and considering the environmental impact of your transportation and consumption habits.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item" id="faq3">
+                <a href="#faq3" class="faq-question">
+                    <span>How can I track my environmental impact?</span>
+                    <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <p>Our <a href="Plan.html" style="color: #00A82D; font-weight: bold;">Plan section</a> includes tools to track your carbon footprint, water usage, and waste production. You can set goals, monitor progress, and get personalized tips for improvement based on your lifestyle.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item" id="faq4">
+                <a href="#faq4" class="faq-question">
+                    <span>Are your shipping methods eco-friendly?</span>
+                    <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <p>Yes! We use 100% recycled packaging materials, carbon-neutral shipping options, and consolidate orders to minimize transportation emissions. We also offer a "green delivery" option where you can choose a slower shipping method that allows us to optimize delivery routes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-section">
+            <h2>Contact Our Green Team</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Have more questions? Our sustainability experts are here to help you make eco-friendly choices.</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Send us your questions and we'll respond within 24 hours with sustainable solutions.</p>
+                    <a href="mailto:greenhelp@ecolife.com" class="green-button">Email Us</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Chat instantly with our eco-advisors during business hours (9AM-5PM EST).</p>
+                    <a href="#" class="green-button">Start Chat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Support</h3>
+                    <p>Call our green helpline for immediate assistance with your sustainability questions.</p>
+                    <a href="tel:+1800ECOLIFE" class="green-button">Call 1-800-ECOLIFE</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="eco-tips">
+            <h2>Quick Eco-Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <h3>Reduce Plastic Use</h3>
+                    <p>Carry reusable bags, bottles, and containers to cut down on single-use plastics that harm marine life.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Save Energy</h3>
+                    <p>Switch to LED bulbs and unplug devices when not in use. Consider solar options where possible.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Water Conservation</h3>
+                    <p>Install low-flow showerheads and fix leaks promptly. Collect rainwater for gardening.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Sustainable Eating</h3>
+                    <p>Reduce meat consumption, buy local and seasonal produce, and compost food waste.</p>
                 </div>
             </div>
         </section>
     </div>
-
-    <footer>
-        <p>Together we can protect our planet. Every action counts.</p>
-        <p>© 2023 Eco-Website Help Center. All rights reserved.</p>
-    </footer>
 </body>
 </html>
